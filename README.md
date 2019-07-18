@@ -63,6 +63,9 @@ The easiest way to deploy this somewhere is clicking on this button:
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
+Note: the wordlist contains more records than the Heroku free database tier can handle.
+You'll need to provision a Hobby Basic Postgresql add-on.
+
 You'll then need to populate the database. On Heroku, you can do:
 
 ```bash
