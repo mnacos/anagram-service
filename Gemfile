@@ -6,6 +6,9 @@ ruby '2.5.5'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.3'
 
+# For Heroku
+gem 'pg'
+
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
@@ -40,10 +43,6 @@ gem 'progress_bar'
 
 group :development, :test do
   gem 'sqlite3'
-end
-
-group :production do
-  gem 'pg'
 end
 
 group :development, :test do
