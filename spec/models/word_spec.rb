@@ -55,26 +55,26 @@ RSpec.describe Word, type: :model do
       expect(Word.anagram 'pinkish').to eq(matching_words)
     end
 
-    it "returns nil if the supplied string does not a match a word in the database" do
-      expect(Word.anagram 'derp').to be_nil
+    it "returns [] if the supplied string does not a match a word" do
+      expect(Word.anagram 'derp').to be_empty
     end
   end
 
   context "[performance]", performance: true do
     require 'benchmark'
 
-    it "anagram searches in a scalable way, independent of dictionary size" do
+    it "anagram searches in a scalable way, practically independent of wordlist size" do
       100.times { Word.create(value: rand.to_s) }
       time100 = Benchmark.measure { Word.anagram 'pinkish' }
-      expect(time100.real).to be < 3.0
+      expect(time100.real).to be < 0.003 # 3 milliseconds
 
       1000.times { Word.create(value: rand.to_s) }
       time1000 = Benchmark.measure { Word.anagram 'pinkish' }
-      expect(time1000.real).to be < 3.0
+      expect(time1000.real).to be < 0.003 # 3 milliseconds
 
       10000.times { Word.create(value: rand.to_s) }
       time10000 = Benchmark.measure { Word.anagram 'pinkish' }
-      expect(time10000.real).to be < 3.0
+      expect(time10000.real).to be < 0.003 # 3 milliseconds
     end
   end
 end
