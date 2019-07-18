@@ -9,7 +9,7 @@ class Word < ApplicationRecord
 
   def self.import_file(file_path, progress_bar=nil)
     File.open(file_path, "r").each_line do |word|
-      create(value: word) && progress_bar && progress_bar.increment!
+      create(value: word.chomp) && progress_bar && progress_bar.increment!
     end
   end
 
