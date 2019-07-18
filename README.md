@@ -27,7 +27,7 @@ GET /sdfwehrtgegfg
 
 * Ruby 2.5.5
 * Rails 5.2.3
-* Sqlite
+* Sqlite3
 
 ## Configuration
 
@@ -61,7 +61,8 @@ This proves that the performance on anagram searches does not degrade with datab
 
 ## Deployment instructions
 
-Click this button:
+The easiest way to deploy this somewhere is clicking on this button:
+
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
 ## Known issues
