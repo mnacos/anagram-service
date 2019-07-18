@@ -27,7 +27,7 @@ GET /sdfwehrtgegfg
 
 * Ruby 2.5.5
 * Rails 5.2.3
-* Sqlite3
+* Sqlite3 (dev/test) or Postgresql (production)
 
 ## Configuration
 
