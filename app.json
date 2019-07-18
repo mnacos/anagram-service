@@ -1,0 +1,6 @@
+{
+  "name": "Anagram Service",
+  "description": "An anagram-producing Rails 5.2 app",
+  "repository": "https://github.com/mnacos/anagram-service",
+  "keywords": ["ruby", "rails", "anagram"]
+}
