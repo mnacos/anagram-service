@@ -35,13 +35,11 @@ No configuration is required for this service, as it has no external dependencie
 
 ## Database initialisation
 
-A suitable production wordlist for this service has been included with the source code (db/wordlist.txt). It can be loaded into a sqlite database with this command:
+A suitable production wordlist for this service has been included with the source code (db/wordlist.txt). It can be loaded into the current database with this command:
 
 ```bash
-RAILS_ENV=development bundle exec rake import:wordlist
+bundle exec rake import:wordlist
 ```
-
-An already populated production.sqlite3 database has been included for ease/speed of deployment.
 
 ## Test suite
 
