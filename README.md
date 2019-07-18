@@ -63,6 +63,14 @@ The easiest way to deploy this somewhere is clicking on this button:
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
+You'll then need to populate the database. On Heroku, you can do:
+
+```bash
+heroku run --app=name-of-your-app bundle exec rake import:wordlist
+```
+
+The latest master of this repo may (or may not :-) be running already here: [https://anagram-service.herokuapp.com/paste](https://anagram-service.herokuapp.com/paste)
+
 ## Known issues
 
 Importing the production wordlist into the database takes a long time. The import process could be improved using system and/or database tools or parallelisation.
